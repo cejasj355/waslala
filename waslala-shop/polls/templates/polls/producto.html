@@ -1,0 +1,65 @@
+{% extends 'polls/base.html' %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+
+<div class="row g-0 centrar-productos">
+    <!-- Left: Product Gallery -->
+    <div class="col-lg-7">
+        <!-- <div class="mb-4 centrar-productos">
+            <img alt="{{ producto.nombre }}" class="gallery-img" src="{{ producto.imagen.url }}" />
+        </div> -->
+        <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{{ producto.imagen.url }}" class="d-block w-100" alt="...">
+                </div>
+                {% for e in producto.imagenes_adicionales.all %}
+                <div class="carousel-item">
+                    <img src="{{ e.imagen.url }}" class="d-block w-100" alt="...">
+                </div>
+                {% endfor %}
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+    </div>
+    <!-- Right: Product Information -->
+    <div class="col-sm-4">
+        <div class="producto-detalles" style="top: 200px;">
+            <div class="product-label mb-2">New Season</div>
+            <h1 class="product-title">{{ producto.nombre }}</h1>
+            <div class="product-price">$ {{ producto.precio }}</div>
+            <p class="mb-5 text-muted lh-lg">
+                {{ producto.descripcion }}
+            </p>
+            <div class="border-top border-dark pt-4 mb-5">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <span class="text-uppercase small fw-bold tracking-widest">Select Size (EU)</span>
+                </div>
+                <div class="row g-2 mb-3">
+
+                </div>
+
+                <a class="text-black text-decoration-none small fw-bold text-uppercase border-bottom border-dark pb-1 d-inline-flex align-items-center"
+                    href="#">
+                    Size Guide <span class="material-symbols-outlined ms-1" style="font-size: 1rem;">straighten</span>
+                </a>
+            </div>
+            <div class="d-grid gap-3 mb-5">
+                <button class="btn btn-primary-custom">Add to Cart</button>
+                <button class="btn btn-outline-custom">Wishlist</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

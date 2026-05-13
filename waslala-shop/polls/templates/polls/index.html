@@ -1,0 +1,224 @@
+{% extends "polls/base.html" %}
+{% load static %}
+{% block title %} Inicio{% endblock %}
+<!-- Hero -->
+{% block content %}
+
+<section class="hero-section position-relative overflow-hidden">
+
+    <!-- BG -->
+    <img
+        src="{% static 'polls/img/hero.png' %}"
+        class="hero-bg"
+        alt="Waslala Hero">
+
+    <!-- overlay -->
+    <div class="hero-overlay"></div>
+
+    <!-- content -->
+    <div class="container position-relative z-2">
+
+        <div class="row align-items-center min-vh-100">
+
+            <div class="col-lg-6">
+
+                <div class="hero-content">
+
+                    <p class="hero-subtitle">
+                        LIMITED EDITION
+                    </p>
+
+                    <h1 class="hero-title">
+                        WASLALA<br>SHOES
+                    </h1>
+
+                    <p class="hero-text">
+                        Camina como si la ciudad fuera tuya
+                    </p>
+
+                    <a href="#new-arrivals"
+                       class="btn btn-light hero-btn">
+                        SHOP THE LOOK
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- NEW ARRIVALS -->
+<section class="py-5" id="new-arrivals">
+
+    <div class="container py-5">
+
+        <!-- TITLE -->
+        <div class="text-center mb-5">
+
+            <h2 class="display-4 serif-font">
+                New Arrivals
+            </h2>
+
+            <p class="text-muted">
+                Discover the latest in high-fashion footwear.
+            </p>
+
+        </div>
+
+        <!-- PRODUCTS -->
+        <div class="row g-5">
+
+            <!-- ITEM -->
+            <div class="col-md-4">
+
+                <div class="product-item">
+
+                    <div class="overflow-hidden mb-3">
+
+                        <img
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_iEVBaGM-bzO8VZ_K7bopxCXlbMQba5VGaApYz0JyT3wMCX1lXM78NwQPIRyGxU5ln9e0VcCfxnF4Xp22JAmy3jdxWC40N52ygaxnkLrvKS-y-NTf9F9twvR7qoPLq5SFOzRrDqsKLUhJKzks1los1Ldmse7x5_OhNV6pIqVbKUPCwc0sRmoQ4xki9LqFEZRAFOno-fhyOEx4TdiJBnOw5FnvhIEJOS9XGAV419Hm8Caaw-PGT0MfIVEfchRd3w4vxIAyzeoBD3zD"
+                            class="img-fluid product-img"
+                            alt="Boot">
+
+                    </div>
+
+                    <h3 class="h5 serif-font">
+                        The Noir Wedge Boot
+                    </h3>
+
+                    <p class="fw-semibold text-danger">
+                        $450.00
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- ITEM -->
+            <div class="col-md-4">
+
+                <div class="product-item">
+
+                    <div class="overflow-hidden mb-3">
+
+                        <img
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAylGr2avBh2AyS6loAk60MuHlU1hl_elQ3q2dVFjCYxBSDCGHF_4ffmnnI3z-mcFiCx42H5OgjahDqDV0DOO4KLG0hSftiBrh-I6-lHn4JI0i58umInh6lFPE8k3vpuBg-CxAeBpAuYTyQY_WKJmsHe1dnMS9P1MInzoO3wGgvhcBZyqyK-KvuEa6gQmZ_5YSfZMnqo53rZjxPECGUUXNStPLyX15Lqwdf3qpKxpSKbsmIbTzoMhu5OABRbUJzntUDrzv2S3YZrZDD"
+                            class="img-fluid product-img"
+                            alt="Heel">
+
+                    </div>
+
+                    <h3 class="h5 serif-font">
+                        Scarlet Stiletto
+                    </h3>
+
+                    <p class="fw-semibold text-danger">
+                        $380.00
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- ITEM -->
+            <div class="col-md-4">
+
+                <div class="product-item">
+
+                    <div class="overflow-hidden mb-3">
+
+                        <img
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAktrh-D6zNFfXZAXf81-PmhNf3dbcK4CqDV663iww284dsNY_B3OTS7vvPTH_hI7xeRZKPAnthtIKqtU47BnQkUudSr4shgdRPi5ae7HBWv0y8zjPaRcdbbGd9JFwduXcYRXAexkGbkLwGBaL_acv7_TbihLoRXWBBOUvenrNcWUrG6lDF6BKErqt2STpKazFgFM3ztB22CQ3jdOkwAjBXR4C3T9u2Ew_yCoe_2zgHrCIKChdPSQu-lQJrMXMl60Sevtnjey4M6JQr"
+                            class="img-fluid product-img"
+                            alt="Flat">
+
+                    </div>
+
+                    <h3 class="h5 serif-font">
+                        Parisian Leather Flat
+                    </h3>
+
+                    <p class="fw-semibold text-danger">
+                        $295.00
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- EDITORIAL -->
+<section class="bg-black text-white py-5 position-relative overflow-hidden">
+
+    <div class="container py-5">
+
+        <div class="row align-items-center">
+
+            <!-- TEXT -->
+            <div class="col-lg-6 mb-5 mb-lg-0">
+
+                <h2 class="display-1 serif-font mb-4">
+                    The Collections
+                </h2>
+
+                <p class="lead text-light opacity-75 mb-5">
+                    Curated with precision, crafted for the iconic.
+                </p>
+
+                <div class="d-flex gap-3">
+
+                    <a href="#" class="btn btn-outline-light rounded-0 px-4 py-3">
+                        View Lookbook
+                    </a>
+
+                    <a href="#" class="btn btn-light rounded-0 px-4 py-3">
+                        Shop All
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- IMAGES -->
+            <div class="col-lg-6">
+
+                <div class="row g-3">
+
+                    <div class="col-6">
+
+                        <img
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwWPcw3ZFkvFPNU2CNWiOtveXohZxPv6Lk6ZzM-v3Bl6iVNsXLq-9XqpUVjhTDPp3z5bcsVnwv9oTGQuF5GmFeAzHXNEfZwRdXd28E00-8_ws5m6HtRSFrGUaunb91r3JZIwIATeYYNMFVkNaaNJ_bm24HxB5HiZpyA-8SeRhVM_h95_wX8eJCSl82K0ytmkwCsbYOy40GGxb9-3WEfkqsGCwRB4XN4rGYZyHOoLjdvSw93PC7ZKNWhcL3L8nGCDawZWfAXjSKb0va"
+                            class="img-fluid editorial-img"
+                            alt="Editorial">
+
+                    </div>
+
+                    <div class="col-6 mt-5">
+
+                        <img
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCr0Juf97cnXUNbp_YFDPwBHbhkmxwvMXRUtQNkI0h9vAVZd6RHJMKa4TOZ8pr1yGxBTjzCEa1mUPw7Y2stvDLKP4BWk3O8vyHBgYAzga4hL-AiW-oZnVDEQ0JYrnSZVOG4VZEE4CFolrjPzWOOXl3XhJHoHlMBkKYtEr0TVImE6xoyF_LvsKI_NiuzoK1q6XMLEX8UT_qe6hL3gsPOPreb6F9yeIpqdhJDzVcTrJNg7o0l_-12RokC1dzm93Vhur_wDi3GHZH5TglH"
+                            class="img-fluid editorial-img"
+                            alt="Editorial">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

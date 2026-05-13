@@ -1,0 +1,616 @@
+@charset "UTF-8";
+:root {
+  --bs-body-bg: #f9f9f9;
+  --bs-body-color: #1a1c1c;
+  --bs-primary: #000000;
+  --brand-red: #b4271d;
+  --brand-gold: #c5a059;
+}
+
+* {
+  margin: 0;
+  padding: 0%;
+}
+
+:root {
+  --waslala-red: #8b0000;
+  --waslala-gold: #c5a059;
+}
+
+.bg-waslala-red {
+  background-color: var(--waslala-red);
+}
+
+.text-waslala-red {
+  color: var(--waslala-red);
+}
+
+/* Hero Collage Section */
+.hero-collage-container {
+  position: relative;
+  height: 90vh;
+  width: 100%;
+  background-color: #000;
+  overflow: hidden;
+}
+
+.collage-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0.6;
+  filter: grayscale(100%);
+}
+
+.collage-overlay-element {
+  position: absolute;
+  z-index: 2;
+}
+
+.accent-rose {
+  top: 10%;
+  left: 5%;
+  width: 300px;
+  filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.5));
+}
+
+.hero-text-block {
+  bottom: 10%;
+  left: 10%;
+  max-width: 500px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-left: 8px solid var(--waslala-red);
+}
+
+/* Buttons */
+.btn-waslala {
+  background-color: var(--waslala-red);
+  color: white;
+  border-radius: 0;
+  padding: 12px 30px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.btn-waslala:hover {
+  background-color: #600000;
+  color: var(--waslala-gold);
+}
+
+/* Product Cards */
+.product-card {
+  border: none;
+  background: transparent;
+  margin-bottom: 2rem;
+}
+
+.product-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 3/4;
+  background-color: #eee;
+}
+
+.product-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.product-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Decorative Elements */
+.section-divider {
+  width: 60px;
+  height: 2px;
+  background-color: var(--waslala-gold);
+  margin: 2rem auto;
+}
+
+/* Floating elements for collage vibe */
+.floating-text {
+  font-size: 8rem;
+  opacity: 0.05;
+  position: absolute;
+  font-weight: 900;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #f8f8f8;
+  color: #1a1a1a;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, .serif-font {
+  font-family: "Playfair Display", serif;
+  letter-spacing: -0.02em;
+}
+
+.cursive-font {
+  font-family: "Dancing Script", cursive;
+}
+
+.navbar-brand {
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
+  font-size: 2rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.nav-link {
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  font-weight: 400;
+}
+
+.editorial-title {
+  font-size: 5rem;
+  font-weight: 900;
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+.font-serif {
+  font-family: "Noto Serif", serif;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 24;
+  vertical-align: middle;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* Custom Typography */
+.display-large {
+  font-size: clamp(3rem, 8vw, 5.25rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+
+.label-caps {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* Header Styles */
+header {
+  border-bottom: 1px solid #000;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-link-custom {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 600;
+  color: #999;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-link-custom:hover {
+  color: #000;
+}
+
+.nav-link-custom.active {
+  color: #000;
+  border-bottom: 2px solid #000;
+  padding-bottom: 4px;
+}
+
+.brand-logo {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: #000;
+  text-decoration: none;
+  line-height: 1;
+}
+
+/* Navbar Toggler Customization */
+.navbar-toggler {
+  border: none;
+  padding: 0;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+/* Hero Styles */
+.hero-section {
+  height: 90vh;
+  min-height: 700px;
+  position: relative;
+  overflow: hidden;
+  background: #eee;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: grayscale(1) contrast(1.25);
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5), transparent);
+  display: flex;
+  align-items: center;
+}
+
+.btn-waslala {
+  padding: 1.25rem 2.5rem;
+  border-radius: 0;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+
+.btn-waslala-primary {
+  background: #000;
+  color: #fff;
+  border: none;
+}
+
+.btn-waslala-outline {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.btn-waslala-outline:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* Section Spacing */
+.section-gap {
+  margin-top: 8rem;
+}
+
+/* Product Cards */
+.product-img-wrapper {
+  overflow: hidden;
+  background: #f3f3f4;
+  margin-bottom: 1.5rem;
+}
+
+.product-img-wrapper img {
+  transition: transform 0.7s ease;
+  width: 100%;
+  display: block;
+}
+
+.product-card:hover .product-img-wrapper img {
+  transform: scale(1.05);
+}
+
+.text-secondary-custom {
+  color: var(--brand-red);
+}
+
+.hero-section {
+  min-height: 100vh;
+  background: black;
+}
+
+/* IMAGEN */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+/* OVERLAY */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.15) 40%, rgba(0, 0, 0, 0.3) 100%);
+}
+
+/* CONTENIDO */
+.hero-content {
+  color: red;
+  max-width: 550px;
+}
+
+/* TITULO */
+.hero-title {
+  font-size: clamp(4rem, 8vw, 7rem);
+  font-weight: 800;
+  line-height: 0.9;
+  margin-bottom: 2rem;
+  letter-spacing: -3px;
+}
+
+/* SUB */
+.hero-subtitle {
+  letter-spacing: 4px;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+/* TEXTO */
+.hero-text {
+  font-size: 1.4rem;
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+
+/* BOTON */
+.hero-btn {
+  border-radius: 0;
+  padding: 1rem 2.5rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: 85vh;
+  }
+  .hero-content {
+    text-align: center;
+    margin: auto;
+  }
+  .hero-overlay {
+    background: rgba(0, 0, 0, 0.45);
+  }
+}
+/* Editorial Block */
+.editorial-section {
+  background: #000;
+  color: #fff;
+  padding: 8rem 0;
+}
+
+.editorial-img {
+  filter: grayscale(1);
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* Collection Grid */
+.collection-grid {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.collection-item {
+  padding: 3rem;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  transition: background 0.3s;
+}
+
+.collection-item:last-child {
+  border-right: none;
+}
+
+/* Newsletter */
+.newsletter-input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #000;
+  border-radius: 0;
+  padding: 1rem 0;
+  width: 100%;
+}
+
+.newsletter-input:focus {
+  box-shadow: none;
+  outline: none;
+  border-bottom-color: var(--brand-gold);
+}
+
+/* Footer */
+footer {
+  border-top: 1px solid #000;
+  padding: 5rem 0;
+  background: #fff;
+}
+
+.footer-link {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #666;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.footer-link:hover {
+  color: #000;
+}
+
+.footer-logo {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  color: #000;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    padding: 2rem;
+    border-bottom: 1px solid #000;
+  }
+  .nav-link-custom {
+    display: block;
+    padding: 1rem 0;
+    font-size: 14px;
+  }
+}
+.container-sm, .container-xxl {
+  max-width: 100%;
+}
+
+.catalogo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: auto;
+}
+
+div .form-login {
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+  width: 80% !important;
+}
+
+.centrar-productos {
+  display: flex !important;
+  justify-content: center;
+  margin: auto;
+}
+
+.contenedor-productos {
+  margin: 0;
+  padding: 0;
+}
+
+.grid-productos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+}
+
+.grid-productos .card {
+  margin: auto;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.producto-detalles {
+  margin-top: 20px;
+}
+
+.card-img-top {
+  height: 50vh;
+  width: 100%;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.card {
+  border-radius: 20px;
+}
+
+.card-body-data {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-btn {
+  align-items: center;
+  background-color: #fff;
+  border-color: #000;
+  color: #000;
+  text-align: start;
+  width: 100%;
+}
+
+.detalle {
+  text-decoration: none;
+  font-size: large;
+}
+
+.material-symbols-outlined .detalle {
+  font-size: 15px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.card-botones {
+  width: 100%;
+}
+
+/* Contenedor principal del carrusel */
+/* Contenedor principal */
+#carouselExample {
+  width: 100%;
+  max-width: 480px; /* Ajustalo al ancho de tu diseño editorial */
+  margin: 0 auto;
+  position: relative;
+}
+
+/* EL ARREGLO: Esto evita que el contenido de la derecha salte */
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  height: 600px; /* IMPORTANTE: Poné la altura exacta que quieras que tenga el collage */
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.carousel-item {
+  height: 100%;
+  width: 100%;
+  /* Esto asegura que las imágenes se superpongan en el mismo lugar */
+  transition: transform 0.6s ease-in-out;
+}
+
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain; /* O 'cover' si querés que llene todo el cuadro como en tu diseño editorial */
+  display: block;
+}
+
+/* Para que las flechas se vean sobre el fondo blanco */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1) brightness(0.5);
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,48 @@
+{% extends 'polls/base.html' %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="mb-4">Tu Carrito de Waslala</h2>
+    <div class="table-responsive">
+        <table class="table align-middle">
+            <thead class="table-light">
+                <tr>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Precio</th>
+                    <th>Subtotal</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="d-flex align-items-center">
+                            <img src="" class="img-thumbnail me-3" style="width: 80px;">
+                            <span>Nombre del Producto</span>
+                        </div>
+                    </td>
+                    <td>
+                        <input type="number" value="1" class="form-control" style="width: 70px;">
+                    </td>
+                    <td>$5.000</td>
+                    <td>$5.000</td>
+                    <td><button class="btn btn-outline-danger btn-sm">Eliminar</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="row justify-content-end mt-4">
+        <div class="col-md-4">
+            <div class="card p-3">
+                <h4>Total: $15.000</h4>
+                <a href="" class="btn btn-success w-100 mt-2">Finalizar Compra</a>
+                <a href="{% url 'catalogo' %}" class="btn btn-link w-100 text-center">Seguir comprando</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

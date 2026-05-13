@@ -1,0 +1,62 @@
+{% extends 'polls/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container-xxl px-4 py-5">
+    <div class="row align-items-end border-bottom pb-4">
+        <div class="col-md-8">
+            <h1 class="headline-xl mb-3">The Footwear Edit</h1>
+            <p class="fs-5 text-muted mb-0 max-width-md" style="max-width: 600px;">A curated selection of artisanal
+                craftsmanship and contemporary silhouettes, designed for the discerning individual.</p>
+        </div>
+        <div class="col-md-4 text-md-end mt-4 mt-md-0">
+            <div class="d-inline-flex align-items-center gap-3">
+                <span class="label-caps text-muted">Sort By</span>
+                <button
+                    class="btn btn-link text-dark text-decoration-none border-bottom border-dark p-0 label-caps d-flex align-items-center gap-2">
+                    Newest First
+                    <span class="material-symbols-outlined fs-6">expand_more</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="contenedor-productos">
+        <!-- Product Grid -->
+        <div class="">
+            <div class="grid-productos">
+                <!-- Product 1 -->
+                {% for p in productos %}
+                <div class="card" style="width: 18rem;">
+                    <img src="{{ p.imagen.url }}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <div class="card-body-data">
+                            <h5 class="card-title">{{ p.nombre }}</h5>
+                            <p class="card-price">${{ p.precio }}</p>
+                        </div>
+                        <div class="card-botones">
+                            <span class="material-symbols-outlined cursor-pointer btn btn-primary card-btn ">Visibility <a href="{% url 'producto' p.slug %}" class="detalle">Ver detalle</a></span>
+                            <span class="material-symbols-outlined cursor-pointer btn btn-primary card-btn ">add_shopping_cart <a href="#" class="detalle btn-agregar">Agregar al carrito</a></span>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+                
+            </div>
+        </div>
+        <!-- Pagination -->
+        <div class="d-flex justify-content-center align-items-center gap-5 border-top pt-5 centrar-productos">
+            <button class="btn btn-link text-muted p-0"><span class="material-symbols-outlined">west</span></button>
+            <div class="d-flex gap-4 align-items-center label-caps">
+                <a class="pagination-link active" href="#">01</a>
+                <a class="pagination-link" href="#">02</a>
+                <a class="pagination-link" href="#">03</a>
+                <span class="text-muted">...</span>
+                <a class="pagination-link" href="#">12</a>
+            </div>
+            <button class="btn btn-link text-dark p-0"><span class="material-symbols-outlined">east</span></button>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
