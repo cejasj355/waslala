@@ -574,7 +574,18 @@ div .form-login{
 .card-botones{
     width: 100%;
 }
-
+@media (max-width:768px) {
+    .grid-productos{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+}
+@media (max-width:500px) {
+    .grid-productos{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+}
 // carrusel
 /* Contenedor principal del carrusel */
 /* Contenedor principal */
