@@ -116,8 +116,16 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
-STATIC_URL = 'static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# 1. Donde Django busca tus archivos de desarrollo (La carpeta que vemos en tu VS Code)
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'), 
+]
+
+# 2. Donde Django COPIARÁ todo al ejecutar collectstatic (Debe ser un nombre distinto)
+# Cámbialo a 'staticfiles' o 'assets_root' para que no sea igual a la anterior
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') 
+
+STATIC_URL = '/static/'
 
 MEDIA_URL = 'media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
