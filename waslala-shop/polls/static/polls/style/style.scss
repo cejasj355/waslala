@@ -341,7 +341,12 @@ header {
 
 /* CONTENIDO */
 .hero-content{
-    color:red;
+    text-shadow: 
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000;
+    color:white;
     max-width:550px;
 }
 
