@@ -1,5 +1,7 @@
 from django.shortcuts import render, get_object_or_404
-from .models import Producto
+from .models import *
+from .carrito import Carrito
+from django.http import JsonResponse
 # Create your views here.
 
 from django.http import HttpResponse
@@ -13,13 +15,14 @@ def catalogo(request):
     return render(request, 'polls/catalogo.html', {'productos': productos})
 
 def producto(request, slug):
-    #Obtengo los datos del producto seleccionado, por el slug
+    # Obtengo los datos del producto seleccionado, por el slug
     producto = get_object_or_404(Producto, slug=slug)
 
-    variaciones = producto.variaciones.all()
+    # CORRECCIÓN: Filtramos las variaciones pasando a través de ProductoColor
+    variaciones = VariacionProducto.objects.filter(producto_color__producto=producto)
 
     return render(request, 'polls/producto.html', {
-        'producto':producto,
+        'producto': producto,
         'variaciones': variaciones
     })
 
@@ -31,4 +34,13 @@ def carrito(request):
 
 def checkout(request):
     return render(request, 'polls/checkout.html')
+
+def agregar_ajax(request, producto_id):
+    carrito = Carrito(request)
+    producto = Producto.objects.get(id=producto_id)
+    carrito.add(producto=producto)
+    return JsonResponse({
+        'cart_count': len(carrito.carrito),
+        'message': f'{producto.name} agregado correctamente'
+    })
 

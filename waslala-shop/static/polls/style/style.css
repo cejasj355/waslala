@@ -392,6 +392,12 @@ header {
   letter-spacing: 2px;
 }
 
+.hero-btn:hover {
+  background-color: #000;
+  color: var(--brand-red);
+  border-color: #000;
+}
+
 /* MOBILE */
 @media (max-width: 768px) {
   .hero-section {
@@ -530,7 +536,6 @@ div .form-login {
 
 .grid-productos .card {
   margin: auto;
-  align-items: center;
   margin-top: 20px;
 }
 
@@ -542,11 +547,11 @@ div .form-login {
   height: 50vh;
   width: 100%;
   padding: 10px;
-  border-radius: 20px;
+  border-radius: 0px;
 }
 
 .card {
-  border-radius: 20px;
+  border-radius: 0px;
 }
 
 .card-body-data {
@@ -554,13 +559,23 @@ div .form-login {
   justify-content: space-between;
 }
 
+.card-body {
+  width: 100%;
+}
+
 .card-btn {
   align-items: center;
   background-color: #fff;
   border-color: #000;
   color: #000;
-  text-align: start;
   width: 100%;
+}
+
+.card-btn:hover {
+  transition: 0.2s;
+  border-color: #000;
+  background-color: #000;
+  color: var(--brand-red);
 }
 
 .detalle {
@@ -573,8 +588,9 @@ div .form-login {
   font-family: "Plus Jakarta Sans", sans-serif;
 }
 
-.card-botones {
+.card-btn {
   width: 100%;
+  border-radius: 0%;
 }
 
 @media (max-width: 768px) {

@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-9rqefy*w%an)ggx#n_+mhsc@l)0914))egp0il#tun_=@$afnv
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['paocejas.pythonanywhere.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -63,6 +63,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'polls.context_processor.monto_total_carrito',
             ],
         },
     },
